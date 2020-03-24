@@ -76,7 +76,7 @@ Wait till the application is installed and run into your device. Now, you can ex
 
 ## Author
 
-**Zamhadi** - [exneval](https://github.com/Zaviore)
+**Zamhadi** - [Zaviore](https://github.com/Zaviore)
 
 ## License
 
