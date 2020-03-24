@@ -17,8 +17,13 @@
 
 import React from 'react';
 import {Input, Text, Icon, Button} from '@ui-kitten/components';
+import {View} from 'react-native';
 
-export const InputLogin = () => {
+const Facebook = style => <Icon {...style} name="facebook-outline" />;
+
+const Googlee = style => <Icon {...style} name="google-outline" />;
+
+export const InputLogin = ({navigation}) => {
   const [valueuser, setUser] = React.useState('');
   const [valuepass, setPassword] = React.useState('');
   const [secureTextEntry, setSecureTextEntry] = React.useState(true);
@@ -32,10 +37,6 @@ export const InputLogin = () => {
   );
   return (
     <>
-      <Text category="h1" style={{padding: 30}}>
-        login
-      </Text>
-
       <Input
         placeholder="Place your Text"
         value={valueuser}
@@ -51,7 +52,43 @@ export const InputLogin = () => {
       />
 
       <Text category="">don't have account? Sign up</Text>
-      <Button style={{width: 300, marginTop: 20}}>Login</Button>
+      <Button
+        style={{width: 300, marginTop: 20}}
+        status="warning"
+        onPress={() => navigation.navigate('Landing')}>
+        Login
+      </Button>
+
+      <Text style={{marginTop: 100, color: 'grey'}}>
+        ──────── Or Log in With ────────
+      </Text>
+      <View style={{display: 'flex', flexDirection: 'row'}}>
+        <Button
+          style={{
+            width: 300,
+            marginTop: 20,
+            flex: 1,
+            margin: 10,
+            backgroundColor: '#4267b2',
+          }}
+          status=""
+          onPress={() => navigation.navigate('Landing')}
+          icon={Facebook}>
+          Facebook
+        </Button>
+        <Button
+          style={{
+            width: 300,
+            marginTop: 20,
+            flex: 1,
+            margin: 10,
+            backgroundColor: '#176BEF',
+          }}
+          onPress={() => navigation.navigate('Landing')}
+          icon={Googlee}>
+          Google
+        </Button>
+      </View>
     </>
   );
 };

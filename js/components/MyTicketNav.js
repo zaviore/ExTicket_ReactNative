@@ -12,7 +12,7 @@ import {View} from 'react-native';
 
 const EditIcon = style => <Icon {...style} name="edit" />;
 
-const MenuIcon = style => <Icon {...style} fill="#fff" name="more-vertical" />;
+const MenuIcon = style => <Icon {...style} fill="white" name="more-vertical" />;
 
 // const BackAction = props => <TopNavigationAction {...props} icon={BackIcon} />;
 
@@ -20,7 +20,7 @@ const EditAction = props => <TopNavigationAction {...props} icon={EditIcon} />;
 
 const MenuAction = props => <TopNavigationAction {...props} icon={MenuIcon} />;
 
-export const TopNav = () => {
+export const Mybooknav = () => {
   const [valueSearch, setSearch] = React.useState(null);
   const onBackPress = () => {};
 
@@ -33,18 +33,9 @@ export const TopNav = () => {
     <>
       <View style={{justifyContent: 'center', padding: 10}}>
         <Text style={{color: '#fff', fontSize: 20, fontWeight: 'bold'}}>
-          EX
+          My Ticket
         </Text>
       </View>
-
-      <Input
-        placeholder="Search"
-        name="searchField"
-        defaultValue={valueSearch}
-        onChange={setSearch}
-        style={{width: 250}}
-        size="small"
-      />
     </>
   );
   return (
