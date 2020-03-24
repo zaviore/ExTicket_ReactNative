@@ -34,49 +34,13 @@ Make sure all of these are properly installed in your system.
 First, clone this repository into your system.
 
 ```
-git clone https://github.com/exneval/cohype.git
+git clone https://github.com/Zaviore/ExTicket.git
 ```
 
 Then, install all the packages that described in `package.json` of both `client` and `server` directories.
 
 ```
 npm install
-```
-
-### Server Setup
-
-For the server setup, first, make sure your MySQL services is running fine. In `server` directory, you'll find `config.json` inside `config` folder. Open and edit the `development` configuration to match your database setup.
-
-```
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
-  },
-```
-
-After completing the database configuration setup, migrate all the required tables.
-
-```
-npm run build
-```
-
-We also need to configure some environtment variables for the server, let's create `.env` file in server's root project, open and edit it, then input the code below.
-
-```
-SECRET_KEY=ThisIsTheSecretKey
-BASE_URL=http://192.168.1.1:3000/
-```
-
-For the `SECRET_KEY` you can custom it as you wish. But, for `BASE_URL` make sure it is matched to your local network Internet Protocol.
-
-And for the last step, running the server
-
-```
-npm start
 ```
 
 ### Client Setup
@@ -93,9 +57,6 @@ Note that the variable `BASE_URL` above is your server network Internet Protocol
 
 Then, install and run the application.
 
-For IOS :
-
-`npm run ios`
 
 And for Android :
 
@@ -105,7 +66,7 @@ Wait till the application is installed and run into your device. Now, you can ex
 
 ## Screenshots
 
-<img src="docs/screenshots/screenshots.png" />
+<img src="Capture2.JPG" />
 
 ## Built With
 
@@ -115,7 +76,7 @@ Wait till the application is installed and run into your device. Now, you can ex
 
 ## Author
 
-**Tri Aginta Ginting** - [exneval](https://github.com/exneval)
+**Zamhadi** - [exneval](https://github.com/Zaviore)
 
 ## License
 
